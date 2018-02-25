@@ -1,0 +1,35 @@
+{
+  "presets": [
+    "react", [
+      "env", {
+        "targets": {
+          "chrome": 33,
+          "browsers": [
+            "safari >= 8"
+          ]
+        },
+        "useBuiltIns": "usage",
+        "modules": false,
+        "exclude": [
+          "transform-async-to-generator"
+        ],
+        "debug": false
+      }
+    ],
+    "stage-2"
+  ],
+  "plugins": [
+    "fast-async", [
+      "transform-runtime", {
+        "helpers": false,
+        "polyfill": false,
+        "regenerator": true,
+        "moduleName": "babel-runtime"
+      }
+    ],
+    "transform-object-rest-spread",
+    "transform-class-properties",
+    "syntax-jsx"
+  ],
+  "comments": false
+}
